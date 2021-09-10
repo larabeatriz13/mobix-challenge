@@ -1,4 +1,4 @@
-const math = require("mathjs")
+const math = require("mathjs");
 const readline = require("readline");
 
 const rl = readline.createInterface({
