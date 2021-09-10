@@ -6,10 +6,18 @@ const rl = readline.createInterface({
     output: process.stdout
 })
 
-rl.question("digite um calculo matemático: ", (expression)=> {
-    try {
-        const result =  math.evaluate(expression);
-    } catch (SyntaxError){console.log("equação inválida!")}
+
+rl.question("digite um calculo matemático: ", (expression)=> 
+{
+    try 
+    {
+    const result =  math.evaluate(expression);
     console.log(`O valor de ${expression} é ${result}`);
     rl.close();
-})
+    } 
+    catch (SyntaxError) 
+    {
+    console.log("equação inválida!");
+    rl.close();
+}})
+
